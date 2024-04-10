@@ -1,0 +1,151 @@
+
+This is the Shark Dice Project made by C Hariharan, G Eswar, R Dhanush Kumar, and S Sabareesh
+
+First, Download all the Files (both PHP and HTML) including images without changing their Names. 
+
+Warning!! : Never try to Rename any of them.
+
+After the Download, use Xampp and Start both Apache and MySql Servers and get to MySql Admin page.
+
+Select New Database and Create a Database with name "shark_game".
+
+All the Tables are inside this DB, so never make changes to the Name.
+
+On Selecting our DB "shark_game" get to the Sql writing page.
+here enter the Following Codes,
+
+	// Creating of Bank Table and Insertion of Values
+CREATE TABLE Bank(User_Name varchar(50),Password varchar(50),Phone bigint,Account_Number bigint,Balance float);
+
+INSERT INTO Bank VALUES('Kent Man','s00ran', 9124246521 , 645121111 ,6710),('Clark','yo00kman', 9876546521 , 33982122324 ,2560),
+('Kumaran','m0kuran', 6543246521 , 33219992324 ,7777),('Muthu Pandi','pandurangan@man', 9876541231 , 3321231111 ,4567),
+('Soorya Pandian','ragun@man', 6786541231 , 4121231111 ,1000),('Harry Potter','manusan@man', 9876121231 , 6781231111 ,10000);
+INSERT INTO Bank VALUES('Guru Moorthy','ukram666',5623123521,8721231111,6710),('Clark','yo00kman',7654246521,34565122324,4200),
+('Look Deer','wetam11',9993246521,33219999876,3500),('Forks Pant','ugadu@man',932113231,4527839811,890);
+SELECT * FROM Bank;
+
+The above Table is used in creating a new Account for our Shark Dice Game./
+
+	// Creation of Players Table and Insertion of Values to it
+CREATE TABLE Player(User_Name VARchar(50),Passcode varchar(50),Phone bigint,email varchar(50),Age int,Account_Number bigint, match_no int,points int);
+
+INSERT INTO Player values ('Jithu','mines&booms',9124246521,'jist620@jml.com',23,645121111,26,65000),
+('MIthune','gun&kimbos',9876546521,'guddu@real.com',41,33982122324,31,54000),
+('Ashokkk','Aruns^Scams',6543246521,'aksh@jml.com',20,33219992324,29,40000),
+('Borne Man','amar&kamal',6786541231,'guddu@real.com',40,4121231111,8,8900),
+('Surraaaa','gun&kimbos',9876121231,'guddu@real.com',30, 6781231111 ,36,35000);
+
+During the Login, this table is used to check if a User exist or not
+
+	// Creation of Wallets Table and insertion of Values
+CREATE TABLE wallets(User_Name varchar(50), Account_Number int,Balance Float);
+
+insert INTO wallets VALUES ('Jithu',645121111,400),('MIthune',33982122324,1000),('Ashokkk',33219992324,1520),('Borne Man',4121231111,4000);
+insert INTO wallets VALUES ('Surraaaa',6781231111,8000);
+SELECT * FROM wallets;
+
+The above table is connected to Player Table as it contains the Money related details about the Players.
+
+	// Creation and Insertion of Values to Current_Match Table
+CREATE TABLE current_match (User_Name varchar(50),match_no int,points int, Bet float,Gain float,Chaos int,play int);
+
+INSERT INTO current_match VALUES ('MIthune',32,5000,400,0,0,1),('Surraaaa',37,5000,2000,0,0,2),('Ashokkk',30,5000,600,0,0,3);
+
+It is used while playing the Game. Whenever the player plays the game, The results greatly affects this table. And this is used to decide the Winner.
+
+	// The Company Table
+CREATE TABLE Company (Amt float);
+
+INSERT into Company value (25000);
+
+It is used to store the earnings made by the Company(Shark Dice).
+
+	// The Donation Table
+CREATE TABLE donar (Name varchar(50),Email varchar(50),Amt float);
+
+It is used to store the data and donation amount made by any user.
+
+	// The Chat Table
+CREATE TABLE chat (Name varchar(50),Email varchar(50),Message varchar(500));
+
+If the User got any Queries to be solved, then their Message and Details of the Users are stored here.
+
+	// The Choose Table
+create table Choose (val int,nope int,play int);
+insert into Choose (6,69,1);
+
+Based the values of this table, a person gains points or loose points.
+
+	// The Win Table
+CREATE TABLE win (amt int);
+INSERT INTO win values (0);
+
+Whenever a Player is eliminated, their bet Amount are Stored for further usage.
+
+That's it.
+
+
+Now,
+
+HOW TO PLAY :
+
+I - On First, in the Home Page players can Login or Logout. They can even chat with us. Donations can be Made.
+II - In Login Page, Enter Username and Password that exists. If Exists, then you are directed to Home or Game Home Page.
+III - If Account doesn't exist, then you are again directed to the Login Page.
+IV - If you are a New User, click the Create Account to get to Creation Page.
+V - Here Enter a Valid Username, Password, Age( Between 18 and 85), Account Number( That exists in the Bank Table), and More and Create the Account.
+	On Creation you are directed to Home / Game Home Page.
+VI - In the Game Home Page, your Personal and Wallet Details are displayed. Further you can transfer data from Wallet to Bank or Bank to Wallet.
+VII - Then Select the Level of Game you need to play. On Selection, you are directed to Confirmation Page.
+VIII - In the Confirmation Page, enter the Amount you need to bet (Greater than Min Amount) and Select the Proceed to get to the Game Page.
+IX - In the Game page, the Details of You and Your Opponents are displayed.
+X - The Dice in the Page decides if you are a Winner or Looser.
+XI - The Player turns are displayed. When such Player plays or rolls the dice, a Random value is generated and the Person who rolled the Dice gains 1000 points.
+	While the Player Number in the Dice looses 800 Points.
+XII - When a Player gets more than 2 Pains, they are Eliminated and the Remainings are continued to play the Game.
+XIII - When there is only one Player left, they are directed to the Achivement Page, where their Points are added to existing Points.
+	Further their Wallet Ballance is increased a they Won the Match.
+XIV - Again on Clicking the Home Button, you are directed to Home Page. 
+XV - On Clicking the Logout, you are disconnected.
+
+
+<?php   $conn = mysqli_connect('localhost', 'root', '', 'shark_game');
+if (!$conn) {    die("Connection failed: " . mysqli_connect_error());   }
+$cnt = "SELECT count(match_no) as cnt from current_match";
+                                $cr = $conn->query($cnt);
+                                if ($cr->num_rows > 0) {
+                                    while($cs = $cr->fetch_assoc()) { $cv = $cs["cnt"];}                            
+                                  } 
+$cnp = "SELECT * from choose where nope=69";
+$ccr = $conn->query($cnp);
+if ($ccr->num_rows > 0) {
+    while($cs = $ccr->fetch_assoc()) { $cccv = $cs["play"];}                            
+} 
+echo $cccv;
+$cnp1 = "SELECT * from current_match where play=$cccv";
+$ccr1 = $conn->query($cnp1);
+if ($ccr1->num_rows > 0) {
+    while($cs1 = $ccr1->fetch_assoc()) { $cv1 = $cs1["Gain"]; $cs2 = $cs1["points"];
+    }                              
+} 
+$cccv1 = $cv1 + 1;  $cpts1 = $cs2 + 1000;
+$cset1 = "UPDATE current_match set Gain=$cccv1,points=$cpts1 where play=$cccv";
+if ($conn->query($cset1) === TRUE) {  }
+$ran = rand(1, $cv);
+$cnp2 = "SELECT chaos,points from current_match where play=$ran";
+$ccr2 = $conn->query($cnp2);
+if ($ccr2->num_rows > 0) {
+    while($cs2 = $ccr2->fetch_assoc()) { $cv2 = $cs2["chaos"]; $css2 = $cs2["points"];}                            
+} 
+$cccv2 = $cv2 + 1;  $cpts2 = $css2 - 800;
+$cset2 = "UPDATE current_match set chaos = $cccv2,points=$cpts2 where play=$ran";
+if ($conn->query($cset2) === TRUE) {  }
+$cngv = $cccv+1;
+if($cngv > $cv){    $cngv = 1;}
+$set = "UPDATE choose set val = $ran,play=$cngv where nope=69";
+if ($conn->query($set) === TRUE) {
+    mysqli_close($conn);  header("Location: game.php");   exit;
+}?>
+
+
+Yeah! This is the Game of Gamblers.

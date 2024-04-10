@@ -1,0 +1,95 @@
+
+--Bank Table
+CREATE TABLE Bank(User_Name varchar(50),Password varchar(50),Phone bigint,Account_Number bigint,Balance float);
+
+
+INSERT INTO Bank VALUES('Kent Man','s00ran', 9124246521 , 645121111 ,6710),('Clark','yo00kman', 9876546521 , 33982122324 ,2560),
+('Kumaran','m0kuran', 6543246521 , 33219992324 ,7777),('Muthu Pandi','pandurangan@man', 9876541231 , 3321231111 ,4567),
+('Soorya Pandian','ragun@man', 6786541231 , 4121231111 ,1000),('Harry Potter','manusan@man', 9876121231 , 6781231111 ,10000);
+INSERT INTO Bank VALUES('Guru Moorthy','ukram666',5623123521,8721231111,6710),('Clark','yo00kman',7654246521,34565122324,4200),
+('Look Deer','wetam11',9993246521,33219999876,3500),('Forks Pant','ugadu@man',932113231,4527839811,890);
+SELECT * FROM Bank;
+
+
+
+
+
+--Player table
+CREATE TABLE Player(User_Name VARchar(50),Passcode varchar(50),Phone bigint,email varchar(50),Age int,Account_Number bigint, match_no int,points int);
+
+INSERT INTO Player values ('Jithu','mines&booms',9124246521,'jist620@jml.com',23,645121111,26,65000),
+('MIthune','gun&kimbos',9876546521,'guddu@real.com',41,33982122324,31,54000),
+('Ashokkk','Aruns^Scams',6543246521,'aksh@jml.com',20,33219992324,29,40000),
+('Borne Man','amar&kamal',6786541231,'guddu@real.com',40,4121231111,8,8900),
+('Surraaaa','gun&kimbos',9876121231,'guddu@real.com',30, 6781231111 ,36,35000);
+
+SELECT * FROM player;
+
+
+--Wallets Table
+CREATE TABLE wallets(User_Name varchar(50), Account_Number int,Balance Float);
+
+insert INTO wallets VALUES ('Jithu',645121111,400),('MIthune',33982122324,1000),('Ashokkk',33219992324,1520),('Borne Man',4121231111,4000);
+insert INTO wallets VALUES ('Surraaaa',6781231111,8000);
+SELECT * FROM wallets;
+
+
+-- Current current_match Table
+CREATE TABLE current_match (User_Name varchar(50),match_no int,points int, Bet float,Gain float,Chaos int,play int);
+
+INSERT INTO current_match VALUES ('MIthune',32,5000,400,0,0,1),('Surraaaa',37,5000,2000,0,0,2),('Ashokkk',30,5000,600,0,0,3);
+
+SELECT * from current_match;
+
+
+--Company Table
+CREATE TABLE Company (Amt float);
+
+INSERT into Company value (25000);
+
+
+--Doantion Table
+CREATE TABLE donar (Name varchar(50),Email varchar(50),Amt float);
+
+--Chat Table
+CREATE TABLE chat (Name varchar(50),Email varchar(50),Message varchar(500));
+
+--choose die Choose Table
+create table Choose (val int,nope int);
+insert into Choose (6,69);
+
+--Gain Table
+CREATE TABLE win (amt int);
+INSERT INTO win values (0);
+
+Test :	Login ->	Borne Man	amar&kamal
+
+
+/*
+UPDATE choose set val = 3 where nope=69;
+
+drop table current_match;
+
+CREATE TABLE current_match (User_Name varchar(50),match_no int,points int, Bet float,Gain float,Chaos int,play int);
+
+INSERT INTO current_match VALUES ('MIthune',32,5000,400,0,0,1),('Surraaaa',37,5000,2000,0,0,2),('Ashokkk',30,5000,600,0,0,3);
+
+DELETE FROM current_match WHERE User_Name = "Jithu";
+
+drop TABLE choose;
+
+create table Choose (val int,nope int,play int);
+insert into Choose values (6,69,1);
+
+UPDATE choose set val = 0 where nope=69;
+
+CREATE TABLE win (amt int);
+INSERT INTO win values (0);
+
+UPDATE current_match set chaos = 0 where User_Name = "Surraaaa";*/
+/**/
+drop TABLE current_match;
+
+CREATE TABLE current_match (User_Name varchar(50),match_no int,points int, Bet float,Gain float,Chaos int,play int);
+
+INSERT INTO current_match VALUES ('MIthune',32,5000,400,0,0,1),('Surraaaa',37,5000,2000,0,0,2),('Ashokkk',30,5000,600,0,0,3);

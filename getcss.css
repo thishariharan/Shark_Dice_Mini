@@ -1,0 +1,127 @@
+#whl{font-family: "Bahnschrift";}
+#logpg{
+    border: 3px solid black;    border-radius: 20px;   
+    padding-bottom: 5%;    text-align: center;     background-color: gold;}
+.btn{
+    border-radius: 15px;    color: red;
+    background-color: gold;    font-size: xx-large;
+    padding: 1%;    font-weight: bold;    border: 5px solid red;}
+.bxs{    margin-left: 2%;    transform: scale(1.5);}
+.btn:hover{    color: gold;    background-color: red;}
+.fms{    font-weight: bolder;    font-size :x-large;}
+.fmg{
+    text-align: center;    margin-top: -10%;    border-radius: 10px;
+    height: 25px;    font-size: medium;    font-weight: bold;
+    width: 50%;}
+#tit{
+    background-color: gold;    color: red;    font-family: "Bahnschrift";
+    padding-top: 0.2%;    padding-bottom: 0.2%;    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;}
+.gto{    width: 10%;    margin-left: 15%;    margin-right: 5%;}
+#hd{    text-align: center;    text-decoration: none;}
+.unl{
+        text-align: center;    color: gold;    padding-top: 1%;
+    margin-left: 30%;    margin-right: 30%;    padding-bottom: 1%;
+    background-color: red;    border-radius: 20px;}
+#lo{
+    border: 3px solid gold;    float: left;    width: 8%;
+    padding: 0.5%;    margin-top: 1%;    margin-left: 2%;}
+#lo:hover{        border: 3px solid red;    border-radius: 5px;}
+#go{    float: right;    width: 3%;
+    margin-top: -5%;    margin-right: 10%;}
+#scs{    padding:  1px;    font-family: "Bahnschrift";
+    background-color: red;    color: gold;    text-align: center;}
+.alls{
+    margin-right: 5%;    margin-left: 5%;    border: 5px solid red;
+    text-decoration: none;    color: gold;    padding: 0.5%;
+    text-align: center;}
+#die{
+    background-color: black;    border: 5px solid red;
+    border-radius: 20px;    padding: 2%;}
+#ls{
+    border-radius: 5px;    color: red;    background-color: gold;
+    font-size: x-large;    padding: 0.5%;    padding-left: 2%;
+    padding-right: 2%;    margin-right: 4%;    text-decoration: none;
+    margin-top: -4.5%;    font-weight: bolder;    border: 4px solid gold;
+    float: right;}
+    .ls{
+    border-radius: 5px;    color: red;    background-color: gold;
+    font-size: x-large;    padding: 0.5%;    padding-left: 2%;
+    padding-right: 2%;    margin-right: 4%;    text-decoration: none;
+    margin-top: -4.5%;    font-weight: bolder;    border: 4px solid gold;
+    float: right;}
+.wlt{
+    background-color: gold;    border: 5px solid red;    border-radius: 20px;
+    padding: 1%;    padding-left: 5%;    padding-right: 5%;}
+.wlts{
+    background-color: gold;    border: 5px solid red;    border-radius: 20px;
+    padding: 1%;    text-align: center;    padding-left: 5%;
+    padding-right: 5%;}
+.rsg{    
+    background-color: red;    border: 4px solid red;    color: gold;
+    font-weight: bolder;    font-size: large;    border-radius: 10px;
+    text-decoration: none;    padding: 1%;    text-align: center;
+    padding-left: 5%;    padding-right: 5%;}
+.rsg3{    
+    background-color: red;    border: 4px solid gold;
+    color: gold;    font-weight: bolder;    margin-left: 33%;
+    text-align: center;    font-size:xx-large;    text-decoration: none;
+    border-radius: 10px;    padding: 1%;    text-align: center;
+    padding-left: 5%;    padding-right: 5%;}
+.wta{
+    border-radius: 10px;    font-size: large;    text-align: center;
+    font-weight: bolder;    border: 5px solid red;    margin-right: 2%;}
+.wtab{
+    border-radius: 10px;    font-size: large;    color: gold;
+    background-color: red;    border: 5px solid red;    font-weight: bolder;
+    text-align: center;    margin-right: 2%;}
+.wtab:hover{
+    border-radius: 10px;    font-size: large;    color: red;
+    border: 5px solid red;    background-color: gold;    text-align: center;
+    margin-right: 2%;}
+.rsg3:hover{    
+    background-color: gold;    border: 4px solid red;    color: red;
+    font-weight: bolder;    margin-left: 33%;    text-align: center;
+    font-size:xx-large;    border-radius: 10px;    padding: 1%;
+    text-align: center;    padding-left: 5%;    padding-right: 5%;}
+.rsg2{    
+    background-color: red;    border: 4px solid red;    color: gold;
+    font-weight: bolder;    font-size: large;    border-radius: 10px;
+    padding: 1%;    text-align: center;    padding-left: 5%;
+    padding-right: 5%;}
+.rsg:hover{    
+    background-color: gold;    border: 4px solid red;    color: red;
+    font-weight: bolder;    font-size: large;    border-radius: 10px;
+    padding: 1%;    text-align: center;    padding-left: 5%;    padding-right: 5%;}
+#ls:hover{
+    border-radius: 5px;    padding-left: 2%;    padding-right: 2%;
+    border: 4px solid red;    float: right;}
+.alls2{
+    margin-right: 5%;    margin-left: 5%;    padding: 0.5%;    text-align: center;}
+.alls:hover{
+    border-radius: 5px;    color: red;    border: 5px solid gold;}
+#bod{
+    display: flex;    align-items: center;    background-color: rgb(244, 244, 244);
+    border-bottom-left-radius: 20px;    background-color: gold;    border-bottom-right-radius: 20px;}
+#mn{    
+    background-color: white;    width: 60%;    padding-left: 1%;
+    padding-right: 1%;    display: inline-block;}
+.vad{    
+    padding: 1%;    border-radius: 20px;    width: 95%;
+    margin-left: 2%;    align-items: center;}
+#ad1{
+    padding: 1%;    border-radius: 20px;    width: 20%;
+    display: inline-block;    border-bottom-left-radius: 20px;}
+.cwu{
+    padding: 1%;    margin-bottom: 1%;    margin-top: 1%;}
+.unq{
+    font-weight: bolder;    color: red;}
+#ad2{
+    width: 20%;    display: inline-block;    padding: 1%;
+    border-radius: 20px;    border-bottom-right-radius: 20px;}
+#dets{
+    background-color: rgb(244, 244, 244);    padding: 1%;}
+::-webkit-scrollbar {    width: 10px;  }  
+  ::-webkit-scrollbar-track {    box-shadow: inset 0 0 5px gold;     border-radius: 10px;  }
+  ::-webkit-scrollbar-thumb {    background: red;     border-radius: 10px;  }
+  ::-webkit-scrollbar-thumb:hover {    background: #b27700;   }
